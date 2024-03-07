@@ -1,0 +1,253 @@
+<!DOCTYPE html> <!-- html로 문서 형식을 선언함 -->
+<html lang="ko"> <!-- html 문서의 시작과 끝을 선언함 -->
+<head> <!-- 문서에 대한 설명-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="이 문서를 작성한 프로그램">
+    <meta name="author" content="이 문서를 작성한 저자">
+    <meta name="description" content="이 문서에 대한 설명">
+
+    <title>탭 타이틀에 들어가는 글자</title>
+
+    <style>
+        div{
+        width: 50px;
+        height: 50px;
+        border: 6px solid rgb(1, 69, 100);
+    }
+
+    span{
+        border: 6px solid rgb(1, 69, 100);
+        width: 200px;
+        height: 100px;
+    }
+    </style>
+</head>
+<body> <!-- 화면 상에 출력해서 보여주고자 하는 모든 정보, 내용을 작성하는 부분 -->
+    <h2>글자 관련 태그</h2>
+    <p>
+        문단 영역을 나눈다?
+    </p>
+    <p>
+        이걸 쓸 때마다 나뉘는구나
+    </p>
+    <P>
+        줄바꿈
+        이나 
+        공백 여러 개는 별도로 표시해야 한다
+        별도의 &nbsp;&nbsp;&nbsp;공백 표시
+        <br>br 표시
+        이 문단 안에서 중첩 가능
+        맞춤형이라 화면 크기 대로 표시 가능
+    </P>
+    <pre>
+        칠 때마다 바로 알아서
+        개행도 해주고
+        띄어쓰기도      여러 개 해준다
+        근데 맞춤형이 아니라 쓰는 그대로 화면을 맞춰야 한다.
+    </pre>
+
+    <b>글자 굵게</b> <br>이건 블럭 형식
+    <strong>글자 굵게 + 스크린 리더</strong> <br>
+    <em>글자 기울이기</em> <br>
+    <i>글자 기울이기</i> <br>
+    <mark>형광펜 표시</mark> <br>
+    <u>밑줄 긋는 태그</u> <br>
+    <s>취소선~</s> <br>
+    기본 글자와 <sub>아래첨자</sub> <br>
+    기본 글자와 <sup>윗첨자</sup> <br>
+    <address title="internet of Things">IOT</address>란 각종 사물에 센서와 통신 기능을 내장해 인터넷에 연결하는 기능
+    <br><br>
+
+
+    <hr>
+    선을 그어주는 기능
+    hr
+    <hr>
+
+    
+    <h2>목록 관련 태그</h2>
+    반응형 웹을 만들 때는 viewport 설정을 해줘야 계속 추적해서 사용이 가능하다?
+    이게 뭐지?
+
+    <li>목록 1</li>
+    <li>목록 2</li>
+    <li>목록 3</li>
+
+    <h3>순서가 없는 목록 태그</h3>
+    ul
+
+    <ul>
+        <li>순서가</li>
+        <li>없다?</li>
+    </ul>
+
+    <h3>순서 있는 목록 태그</h3> h도 블럭 형식
+    <ol type="1" start="5" reversed>
+        <!-- reversed는 알파벳 제외 숫자 타입 형식만 가능-->
+        <li>HTML</li>
+            <ul>
+                <li>글자 관련</li>
+                <li>목록 관련</li>
+                <li>li 자체는 항목 행이고 서식 지정이 ol과 ul이구나</li>
+            </ul>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h3>설명 관련 목록 태그</h3>
+    <d1>
+        <dt>제목 입력 태그</dt>
+        <dd>설명 입력 태그</dd> <!-- 이 태그가 탭이 되는구나 -->
+    </d1>
+
+    <hr>
+
+    <h2>표 관련 태그</h2>
+    <table border="6">
+        <caption>웹브라우저의 종류</caption> <!-- 테이블의 제목 -->
+        <tr>
+            <!-- 표는 퍼센트로 크기를 지정해줄 수 없음 -->
+            <th width="100" height="20">종류</th>
+            <th width="100">장비명</th>
+            <th width="100">제조사</th>
+            <th width="100">수량</th>
+        </tr>
+        <tr>
+            <td>Convention</td>
+            <td>f101</td>
+            <td>ADB</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td width="100" height="50" colspan="2" rowspan="2"></td>
+            <td width="100" height="20"></td> <!-- 여기서 height를 지정해주지 않았으니까 다른 지정해준 것들에 밀려서 크기가 작아지는 것 -->
+        </tr>
+        <tr>
+            <td width="100" height="50" rowspan="1"></td> <!-- rowspan으로 2칸을 차지해야 하는데 밑에 더 만들어준 행이 없으므로 옆으로 밀려나는 것 -->
+        </tr>
+        <tr>
+            <td width="100" height="20" colspan="3"></td>
+            <!-- 행과 열이 서로 맞으면 당연히 겹칠 수 있음 / 행과 행, 열과 열은 서로 겹칠 수 없음 -->
+        </tr>
+
+    </table>
+
+    <h2 id="image">이미지 및 멀티미디어 태그</h2>
+    <h3>이미지</h3>
+    <img src="상대 경로/파일 경로/파일 이름 지정" alt="이미지에 대한 설명" width="100" height="100">
+    <img src="resources/Image/sample1.PNG" alt="예시" width="40%" height="20%">
+    <!-- 화면 크기에 대한 퍼센트로 크기 지정이 가능하다 -->
+
+    <h3>오디오 태그</h3>
+    <audio src="resources/audio/세븐틴-소용돌이.mp3" controls autoplay loop></audio>
+    <!-- 
+        src에 경로를 지정하면 됨
+        controls : 안 써주면 플레이 바가 표시되지 않음
+        autoplay : 자동재생 여부 (크롬은 안 됨)
+     -->
+    <h3>비디오 태그</h3>
+    <video src="동영상이 저장된 경로" controls autoplay loop width="300" height="200"></video>
+
+    <h2>영역 관련 태그</h2>
+    
+    <div style="background: skyblue;">첫 번째 영역</div>
+    <div style="background: rgb(7, 142, 196);">두 번째 영역 : div는 블럭 요소라서 이 영역 내에서만 사용 가능, 줄바꿈도 자동으로 된다, 한 줄 단위로 영역을 차지</div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <span style="background:skyblue;">입력하면 바뀌나?</span>
+    <span style="background:rgb(7, 142, 196);">그러네 <br> span은 인라인 요소라서 내용 자체를 영역으로 인식한다</span>
+
+     <iframe src="" frameborder="0"></iframe>
+
+     <h2>하이퍼링크 관련 태그</h2>
+    <li><a href="http://www.naver.com/">네이버</a></li>
+    <!-- 하이퍼링크를 선택한 자리에서 넘어가는 게 디폴트 target="_self" 생략되어 있음 -->
+
+    <a href="http://www.google.com" target="_self">구글</a>
+     <a href="http://daum.net" target="_blank">다음</a>
+
+    <a href="http://www.google.com" target="_blank">
+        이 안에 하이퍼링크를 거는 양식이 들어가니까 이미지도 여기에 넣어주면 됨
+        <img src="resources/Image/sample1.PNG" alt="구글로 이동하는 이미지">
+    </a> <br>
+    <a href="#image">이미지 태그로 가기</a>
+    <br><br><br><br><br>
+
+    
+
+
+
+    <h2>입력 양식 및 폼 관련 태그</h2>
+
+    form 안의 submit 버튼을 누르면 입력한 값들을 전부 묶어 서버로 넘김
+    <br>
+    form action="요청 보낼 서버 경로" method="요청 전송 방식(공개적 : get/비공개적 : post)"
+    <br><br>
+
+    <form action="https://search.naver.com/search.naver" method="get">
+        <fieldset>
+            검색어 : <input type="text" name="query">
+            <input type="submit">
+        </fieldset>
+        <!-- 명령어가 구체적으로 어떻게 되어있는지는 모르겠지만
+            검색창의 query 자리에 내가 입력한 key 값을 넣으면
+            그에 해당하는 value들을 찾아주는 것 -->
+    </form>
+    <!-- 요청 시에 key value로 전달하는 것인지 아니면 key를 전달해 value를 가져오는 것인지? -->
+
+    <form action="http://www.naver.com/" method="get">
+        <fieldset>
+            <legend>타이틀</legend>
+            입력 : <input type="text" name="text1"> <br>
+        </fieldset>
+        <fieldset>
+            <legend>극장</legend>
+            입력 : <input type="text" name="text1"> <br>
+        </fieldset>
+        <!-- 서로 키 값이 같아 어느 자료를 꺼내와야 할지 혼선이 올 것 -->
+        <input type="submit">
+    </form>
+
+    <br><br><br>
+    아이디 : 
+    <form action="test.com" method="get">
+    <input type="text" name="userid" placeholder="사용자명 또는 아이디 입력" 
+           minlength="8" maxlength="12" required>
+           <!-- placeholder : 값이 안 들어있을 때 보이는 내용 -->
+        <br>
+           <input type="submit">
+    </form>
+    <br>
+    <input type="들어갈 양식 지정"> <br><br>
+
+    단순 문자 : <input type="text"> <br>
+    비밀번호 : <input type="password"> <br>
+    체크 박스 : <input type="radio"> <br>
+    제출 버튼 : <input type="submit" value="이름 지정 가능"> <br>
+    검색 : <input type="search" name="keyword"> x 표시 있는 박스 <br>
+    이메일 : <input type="email" name="email"> @가 있나 없나 검사해줌 <br>
+    홈페이지 : <input type="url" name="keyword"> 제대로 된 url 형식인지 검사해줌 <br>
+    전화번호 : <input type="phone" name="phone"> 모바일 사용 시 자동으로 키패드 열어줌 <br>
+    여러 줄 입력 가능한 텍스트 상자 :
+    <textarea name="description" id="" cols="30" rows="10" style="resize: none;"></textarea>    
+    박스 내에서 스크롤이 생겨 같은 공간 내에서 많은 양의 텍스트를 쓸 수 있음 <br><br>
+    숫자만 입력 가능한 박스 : <input type="number" name="amount" min="0" max="20" step="2" value="10"> <br>
+    범위 스크롤 : <input type="range" name="score" min="0" max="100" step="2" value="50"> <br>
+    연도, 월, 일 입력 : <input type="date"> <br>
+    연도, 월 입력 : <input type="month"> <br>
+    연도, 주 입력 : <input type="week"> <br>
+    시간 입력 : <input type="time"> <br>
+    
+
+
+    <br><br>
+
+   
+    
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영역 관련 태그</title>
+    <!-- html에서 가장 중요한 부분 
+        앱은 바둑판처럼 쪼개진 블럭 안에 넣음 
+        웹은 블럭 중에 몇 개를 쓰겠다
+        html로 들어갔을 때 빨간 영역은 안 쓰는 영역, 파란 곳은 쓰는 영역
+        영역을 쪼개서 분리하는 것을 와이어 프레임 이라고 함
+        이런 구조를 나누는 것을 영역 태그라고 함
+    -->
+    <style>
+        /* div라는 파일에는 이런 스타일을 주겠다고 설정 해주는 것*/
+        div{
+            width : 200px;
+            height : 200px;
+            border: 1px solid black;
+        }
+        span{
+            border:1px solid black;
+            width : 200px;
+            height : 200px;
+        /* 인라인 요소에는 대부분 가로, 세로 길이 지정 불가 */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>scsc</h1>scsc
+    <b>dsdfsdfsdfsdsdfsdfgegegeg</b>sdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf
+    <!-- 
+        블럭 요소 : 한 줄 단위로 영역을 차지함
+        -- 내 영역을 벗어나면 기능을 못 쓰게 하는 것들이 블럭
+                    > 줄바꿈이 적용 되어 이미 존재하는 태그의 다음 줄에 다음 영역이 잡힘
+                    (p, pre, "div"...)
+        인라인 요소 : content(내용) 영역에 해당하는 부분만 영역을 차지하는 요소
+                    > 줄바꿈이 적용 되지 않아 다음 영역이 바로 옆으로 잡힘
+                    (b, mark, s, img, "span", ...)
+    -->
+    
+    <h1>영역 관련 태그</h1>
+    <h2>div태그와 span태그의 차이점 1 : 줄바꿈 적용</h2>
+    
+    <h3>div태그</h3>
+    <p>div 태그는 블럭 요소로 한 줄 단위로 영역을 차지(이미 존재하는 태그 다음 줄에 영역이 잡힘)</p>
+
+    <div style="background: red;">첫 번째 영역</div>
+    <div style="background: orange;">두 번째 영역</div>
+    <div style="background: yellow;">세 번째 영역</div>
+<!-- 블럭이기 때문에 한 행을 다 사용해서 다음 영역이 밑으로 들어감 -->
+
+    <h3>span 태그</h3>
+    <p>span 태그는 인라인 요소로 content 영역만 차지(줄바꿈이 발생 되지 않고 옆으로 영역이 잡힌다.)</p>
+
+    <span style="background: red;">첫 번째 영역</span>
+    <span style="background: orange;">두 번째 영역</span>
+    <span style="background: yellow;">세 번째 영역</span>
+<!-- style로 분명 크기를 지정 했는데도 바뀌지 않음 -->
+
+    <h2>div 태그와 span 태그의 차이점 2 : 영역 지정 방식</h2>
+
+    <h3>div 태그 : 사각형 박스로 영역을 지정</h3>
+    <div>
+        사실 교체 자체가 중요한 건 아니다. 진행자 결정은 제작진의 권한이고, 새 진행자를 물색하는 건 개편 철 방송가에선 흔한 일이다. 다만 교체 이유가 시청률(청취율)이 됐건, 출연료(제작비)가 됐건, 아니면 프로그램의 성격 변화가 됐건, 제작진과 진행자, 그리고 시청자(청취자)가 어느 정도 납득할 수 있어야 하는 건 상식이다.
+
+    </div>
+    <br>
+    <span>
+        사실 교체 자체가 중요한 건 아니다. 진행자 결정은 제작진의 권한이고, 새 진행자를 물색하는 건 개편 철 방송가에선 흔한 일이다. 다만 교체 이유가 시청률(청취율)이 됐건, 출연료(제작비)가 됐건, 아니면 프로그램의 성격 변화가 됐건, 제작진과 진행자, 그리고 시청자(청취자)가 어느 정도 납득할 수 있어야 하는 건 상식이다.
+
+        
+        이번 김씨 교체는 그런 ‘상식’에 반해서 일어났다. KBS가 여태 공식 입장을 내지 않고 있으므로 지난 4일부터 다수 언론 보도에서 확인된 사실만 종합하면, 김씨는 마지막 한 회차 녹화를 앞두고 제작진에게 하차를 통보받았고, 그 제작진 역시 진행자 교체 결정을 통보받은 것으로 알려졌다. 후임 진행자로 남희석씨가 낙점됐다는 사실 또한 마찬가지다.
+        
+        갑작스러운 교체 소식에 그 배경을 두고 여러 말이 나왔다. 낮은 시청률 때문이라는 둥 김씨가 전임 대통령이 선물한 시계를 자랑해서 미운털이 박혔다는 둥 그럴듯한 분석과 근거 없는 추론이 뒤섞였다. 고 송해씨가 진행하던 시절보다 시청률이 떨어진 건 사실이다. 그러나 최근 6개월 평균 5% 안팎으로 안정적인 편이며, 여전히 동 시간대 1위다. 코로나19로 인한 장기간의 공백, 프로그램의 정체성이나 다름없었던 송해씨의 부재 등을 감안하면 2010년대 이전과 같은 두 자릿수 시청률을 기대하기 어려운 게 사실이다.
+    </span>
+    <!-- 한 문장으로 다 써서 문장 전체가 박스로 나옴 -->
+
+    <!-- 모든 태그는 블럭이냐 인라인이냐 두 가지로 나뉨 -->
+
+    <h1>iframe</h1>
+    <p>웹 문서 안에 다른 웹페이지를 추가하는 태그(인라인 요소)</p>
+
+    <!-- <iframe src="<iframe "width="560" height="315" src="https://www.youtube.com/embed/5Jn198qc9X4?si=weOPyR4gORNyOqjD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>" width="600" height="700"></iframe> -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zaXULnWg2C4?si=90PD6khqnrID_lhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <!-- 너무 많이 하면 복잡하지만 남들의 다른 자료들을 가져오고 싶을 때 사용 -->
+
+
+</body>
+</html>
