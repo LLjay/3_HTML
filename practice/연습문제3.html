@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제3</title>
+</head>
+<body>
+    <h2>회원가입</h2>
+    <form action="">
+        <fieldset>
+            <fieldset>
+                <legend>필수 입력 사항</legend>
+
+                <b>ID</b>
+                <input type="text" name="id" required placeholder="아이디10글자이내" maxlength="10">
+                <input type="button" value="중복확인"> <br>
+
+                <b>비밀번호</b>
+                <input type="text" name="password" required placeholder="영문,숫자,문자,특수문자포함"> <br>
+
+                <b>비밀번호 확인</b>
+                <input type="text" name="password" required> <br>
+
+                <b>Email</b>
+                <input type="text" name="email" required>
+                <select name="" id="">
+                    직접입력
+                    <option value="">직접입력</option>
+                    <option value="">@naver.com</option>
+                    <option value="">@google.com</option>
+                    <option value="">@daum.net</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>추가 정보</legend>
+                프로필사진 : 파일 선택 : 
+                <input type="file" name="file"> <br><br><br>
+
+                성별 : 
+                <input type="radio" name="gender" id="gender-m">
+                <label for="gender-m">남자</label>
+                <input type="radio" name="gender" id="gender-f">
+                <label for="gender-f">여자</label> <br><br>
+
+                생년월일 :
+                <input type="date" name="date"> <br><br><br>
+
+                취미 <br>
+                <input type="checkbox" name="hobby">
+                <label for="">야구</label>
+                <input type="checkbox" name="hobby">
+                <label for="">농구</label>
+                <input type="checkbox" name="hobby">
+                <label for="">축구</label> <br>
+                <input type="checkbox" name="hobby">
+                <label for="">공부</label>
+                <input type="checkbox" name="hobby">
+                <label for="">음악감상</label> <br>
+                <input type="checkbox" name="hobby">
+                <label for="">기타 :
+                    <input type="text">
+                </label> <br>
+
+                자기소개 
+                <textarea name="" id="" cols="30" rows="7" style="resize: none;"></textarea>
+            </fieldset>
+
+            <br>
+            <input type="button" value="회원가입">
+            <input type="button" value="다시입력">
+            <input type="button" value="이전으로">
+        </fieldset>
+    </form>
+
+
+    <br><br><hr><br><br>
+
+    강사님 예시
+
+    <h1>회원가입</h1>
+    <form action="">
+        <fieldset>
+
+            <fieldset>
+                <legend>필수 입력 사항</legend>
+                <strong>ID <input type="text" name="userid" placeholder="아이디10글자이내" maxlength="10" required> </strong> <input type="button" value="중복확인"> <br>
+                <!-- 이런 value는 표시되는 값이지만 text 같은 곳에 value를 넣으면 칸 내에 내용이 입력됨 -->
+                <strong>비밀번호 <input type="password" name="userPwd" placeholder="영문,숫자,문자,특수문자포함" required></strong> <br>
+                <strong>비밀번호 확인<input type="text"></strong> <br>
+                <!-- 확인 하기 위한 것이니까 굳이 서버에 안 보내줘도 됨 => name 딱히 안 써도 됨 -->
+                <strong>Email <input type="text"><select name="national" id="">
+                    <option value="">@naver.com</option>
+                    <option value="">nate.com</option>
+                    <option value="" selected>직접입력</option>
+                    <!-- selected 걸린 옵션을 기본적으로 처음 보이는 값으로 세팅해줌 -->
+                </select></strong><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>추가 정보</legend>
+                프로필 사진 : 파일선택 : <input type="file"> <br><br><br>
+                성별 : 
+                <input type="radio" name="gender" id="man">
+                <label for="man">남자</label>
+                <!-- name의 이름이 같아서 중복이 안 되고 왔다갔다 할 수 있는 것 -->
+                <input type="radio" name="gender" id="woman">
+                <label for="woman">여자</label> <br><br>
+
+                생년월일 : <input type="date" name="dateIn"> <br><br><br>
+
+                취미 <br>
+                <input type="checkbox" id="baseball" name="hobby" value="">
+                <!-- value 값이 이름과 함께 전송 -->
+                <label for="baseball">야구</label>
+                <input type="checkbox">
+                <label for="">농구</label>
+                <input type="checkbox">
+                <label for="">축구</label>
+                <br>
+                <input type="checkbox">
+                <label for="">공부</label>
+                <input type="checkbox">
+                <label for="">음악감상</label>
+                <br>
+                <input type="checkbox">
+                <label for="">기타</label> : <input type="text">
+                <br>
+                자기소개
+                <textarea name="" id="" cols="30" rows="5" style="resize: none;"></textarea>
+        </fieldset>
+
+        <input type="submit" value="회원가입">
+        <!-- 서버에 제출해야 하기 때문에 button이 아닌 submit -->
+        <input type="reset" value="다시입력">
+        <!-- 다시입력이니까 전부 초기화 하기 때문에 reset -->
+        <input type="button" value="이전으로">
+        <!-- 해당하는 기능 없으니까 button -->
+    </form>
+</body>
+</html>
